@@ -3,11 +3,11 @@
 /**
  * Fired during plugin activation
  *
- * @link       http://williambay.com
+ * @link       https://flauntsites.com
  * @since      1.0.0
  *
- * @package    Flaunt_Your_Clients
- * @subpackage Flaunt_Your_Clients/includes
+ * @package    Flaunt_Your_Studio
+ * @subpackage Flaunt_Your_Studio/includes
  */
 
 /**
@@ -16,11 +16,11 @@
  * This class defines all code necessary to run during the plugin's activation.
  *
  * @since      1.0.0
- * @package    Flaunt_Your_Clients
- * @subpackage Flaunt_Your_Clients/includes
+ * @package    Flaunt_Your_Studio
+ * @subpackage Flaunt_Your_Studio/includes
  * @author     William Bay <william@williambay.com>
  */
-class Flaunt_Your_Clients_Activator {
+class Flaunt_Your_Studio_Activator {
 
 	/**
 	 * Short Description. (use period)
