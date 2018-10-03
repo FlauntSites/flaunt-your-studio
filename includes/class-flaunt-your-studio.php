@@ -6,11 +6,11 @@
  * A class definition that includes attributes and functions used across both the
  * public-facing side of the site and the admin area.
  *
- * @link       http://williambay.com
+ * @link       https://flauntsites.com
  * @since      1.0.0
  *
- * @package    Flaunt_Your_Clients
- * @subpackage Flaunt_Your_Clients/includes
+ * @package    Flaunt_Your_Studio
+ * @subpackage Flaunt_Your_Studio/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Flaunt_Your_Clients
- * @subpackage Flaunt_Your_Clients/includes
+ * @package    Flaunt_Your_Studio
+ * @subpackage Flaunt_Your_Studio/includes
  * @author     William Bay <william@williambay.com>
  */
-class Flaunt_Your_Clients {
+class Flaunt_Your_Studio {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -35,7 +35,7 @@ class Flaunt_Your_Clients {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Flaunt_Your_Clients_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Flaunt_Your_Studio_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -72,7 +72,7 @@ class Flaunt_Your_Clients {
 		} else {
 			$this->version = '1.0.0';
 		}
-		$this->plugin_name = 'flaunt-your-clients';
+		$this->plugin_name = 'flaunt-your-studio';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -86,10 +86,10 @@ class Flaunt_Your_Clients {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Flaunt_Your_Clients_Loader. Orchestrates the hooks of the plugin.
-	 * - Flaunt_Your_Clients_i18n. Defines internationalization functionality.
-	 * - Flaunt_Your_Clients_Admin. Defines all hooks for the admin area.
-	 * - Flaunt_Your_Clients_Public. Defines all hooks for the public side of the site.
+	 * - Flaunt_Your_Studio_Loader. Orchestrates the hooks of the plugin.
+	 * - Flaunt_Your_Studio_i18n. Defines internationalization functionality.
+	 * - Flaunt_Your_Studio_Admin. Defines all hooks for the admin area.
+	 * - Flaunt_Your_Studio_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -103,40 +103,40 @@ class Flaunt_Your_Clients {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-flaunt-your-clients-loader.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-flaunt-your-studio-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-flaunt-your-clients-i18n.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-flaunt-your-studio-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-flaunt-your-clients-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-flaunt-your-studio-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-flaunt-your-clients-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-flaunt-your-studio-public.php';
 
 		/**
 		 * The class responsible for loading the Custom Post Types
 		 * 
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-flaunt-sites-clients-custom-post-types.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-flaunt-sites-studio-custom-post-types.php';
 
 
-		$this->loader = new Flaunt_Your_Clients_Loader();
+		$this->loader = new Flaunt_Your_Studio_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Flaunt_Your_Clients_i18n class in order to set the domain and to register the hook
+	 * Uses the Flaunt_Your_Studio_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -144,7 +144,7 @@ class Flaunt_Your_Clients {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Flaunt_Your_Clients_i18n();
+		$plugin_i18n = new Flaunt_Your_Studio_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -159,7 +159,7 @@ class Flaunt_Your_Clients {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Flaunt_Your_Clients_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new Flaunt_Your_Studio_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -175,7 +175,7 @@ class Flaunt_Your_Clients {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Flaunt_Your_Clients_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new Flaunt_Your_Studio_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -206,7 +206,7 @@ class Flaunt_Your_Clients {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Flaunt_Your_Clients_Loader    Orchestrates the hooks of the plugin.
+	 * @return    Flaunt_Your_Studio_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

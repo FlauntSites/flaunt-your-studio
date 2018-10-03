@@ -1,13 +1,14 @@
+
 <?php
 
 /**
  * Register all actions and filters for the plugin
  *
- * @link       http://williambay.com
+ * @link       https://flauntsites.com
  * @since      1.0.0
  *
- * @package    Flaunt_Your_Clients
- * @subpackage Flaunt_Your_Clients/includes
+ * @package    Flaunt_Your_Studio
+ * @subpackage Flaunt_Your_Studio/includes
  */
 
 /**
@@ -17,11 +18,11 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    Flaunt_Your_Clients
- * @subpackage Flaunt_Your_Clients/includes
+ * @package    Flaunt_Your_Studio
+ * @subpackage Flaunt_Your_Studio/includes
  * @author     William Bay <william@williambay.com>
  */
-class Flaunt_Your_Clients_Loader {
+class Flaunt_Your_Studio_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

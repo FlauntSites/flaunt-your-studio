@@ -6,11 +6,11 @@
  * Loads and defines the internationalization files for this plugin
  * so that it is ready for translation.
  *
- * @link       http://williambay.com
+ * @link       https://flauntsites.com
  * @since      1.0.0
  *
- * @package    Flaunt_Your_Clients
- * @subpackage Flaunt_Your_Clients/includes
+ * @package    Flaunt_Your_Studio
+ * @subpackage Flaunt_Your_Studio/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Flaunt_Your_Clients
- * @subpackage Flaunt_Your_Clients/includes
+ * @package    Flaunt_Your_Studio
+ * @subpackage Flaunt_Your_Studio/includes
  * @author     William Bay <william@williambay.com>
  */
-class Flaunt_Your_Clients_i18n {
+class Flaunt_Your_Studio_i18n {
 
 
 	/**
@@ -35,7 +35,7 @@ class Flaunt_Your_Clients_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'flaunt-your-clients',
+			'flaunt-your-studio',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);

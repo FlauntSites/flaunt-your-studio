@@ -3,11 +3,11 @@
 /**
  * The admin-specific functionality of the plugin.
  *
- * @link       http://williambay.com
+ * @link       https://flauntsites.com
  * @since      1.0.0
  *
- * @package    Flaunt_Your_Clients
- * @subpackage Flaunt_Your_Clients/admin
+ * @package    Flaunt_Your_Studio
+ * @subpackage Flaunt_Your_Studio/admin
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the admin-specific stylesheet and JavaScript.
  *
- * @package    Flaunt_Your_Clients
- * @subpackage Flaunt_Your_Clients/admin
+ * @package    Flaunt_Your_Studio
+ * @subpackage Flaunt_Your_Studio/admin
  * @author     William Bay <william@williambay.com>
  */
-class Flaunt_Your_Clients_Admin {
+class Flaunt_Your_Studio_Admin {
 
 	/**
 	 * The ID of this plugin.
@@ -65,15 +65,15 @@ class Flaunt_Your_Clients_Admin {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Flaunt_Your_Clients_Loader as all of the hooks are defined
+		 * defined in Flaunt_Your_Studio_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Flaunt_Your_Clients_Loader will then create the relationship
+		 * The Flaunt_Your_Studio_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/flaunt-your-clients-admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/flaunt-your-studio-admin.css', array(), $this->version, 'all' );
 
 	}
 
@@ -88,15 +88,15 @@ class Flaunt_Your_Clients_Admin {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Flaunt_Your_Clients_Loader as all of the hooks are defined
+		 * defined in Flaunt_Your_Studio_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Flaunt_Your_Clients_Loader will then create the relationship
+		 * The Flaunt_Your_Studio_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/flaunt-your-clients-admin.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/flaunt-your-studio-admin.js', array( 'jquery' ), $this->version, false );
 
 	}
 
